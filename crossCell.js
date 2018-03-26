@@ -30,7 +30,7 @@ function cellDraw()
 	var len=width/(max_X*1.0);
 	var i,j;
 	for(i=0;i<max_X;i++)
-	
+	{
 		for(j=0;j<max_Y;j++)
 		{
 			if((onoff_Arr[i][j]&1)==1)
