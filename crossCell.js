@@ -1,19 +1,19 @@
 var max_X, max_Y;
-var onoff_Arr=new Array(50);
+var onoff_Arr=new Array(100);
 function setup()
 {
 	createCanvas(windowWidth, windowHeight);
 	max_X=10;
 	max_Y=ceil(max_X*1.0/width*height);
-	for(var i=0;i<50;i++) onoff_Arr[i]=new Array(50);
+	for(var i=0;i<100;i++) onoff_Arr[i]=new Array(100);
 	noFill();
 	cellReset();
 }
 function draw()
 {
 	background(255);
-	max_X=int(map(mouseX,0,width,1,20));
-  max_Y=ceil(max_X*1.0/width*height);
+	max_X=int(map(mouseX,0,width,1,50));
+	max_Y=ceil(max_X*1.0/width*height);
 	cellDraw();
 }
 function mousePressed()
@@ -30,7 +30,7 @@ function cellDraw()
 	var len=width/(max_X*1.0);
 	var i,j;
 	for(i=0;i<max_X;i++)
-	{
+	
 		for(j=0;j<max_Y;j++)
 		{
 			if((onoff_Arr[i][j]&1)==1)
@@ -54,9 +54,9 @@ function cellDraw()
 }
 function cellReset()
 {
-	for(var i=0;i<50;i++)
+	for(var i=0;i<100;i++)
 	{
-		for(var j=0;j<50;j++)
+		for(var j=0;j<100;j++)
 		{
 			onoff_Arr[i][j]=int(random(4));
 		}
